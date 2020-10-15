@@ -1,0 +1,120 @@
+/*
+Taren Chen
+Taren_Chen@student.uml.edu
+CS UserName: tchen1
+
+this is the css page for my HW4 Assignment
+
+passed CSS validator
+
+DISCLAIMER: ALL LOGO FROM COMPANIES ARE FROM EITHER THEIR WEBSITE OR GOOGLE
+
+*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+ }
+
+/*Nav Bar*/
+
+.navbar-color{
+    background-color: #283655;
+}
+
+
+/* FrontPage */
+
+.FrontPage{
+    background: url("../pictures/mtlay.JPG");
+    background-color: #1e1f26;
+    min-height: 910px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+}
+
+/* Education and Experience and GUI page styling
+
+Gave imgs borders and fix sizes
+
+Most of the other styling is for spacing.
+
+*/
+img[src="./pictures/umass.png"]{
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 300px;
+    border-style: solid;
+    border-color: rgb(89, 208, 248);
+}
+img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./pictures/fidelity.jpg"], img[src="./pictures/jp.jpg"]{
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: auto;
+    border-style: solid;
+    border-color: rgb(89, 208, 248);
+}
+
+#EXPERIENCE, #EDUCATION, #HW{
+    padding-top: 1%;
+    min-height: 600px;
+    padding-bottom: 3%;
+    margin: 0 auto;
+
+}
+
+#EXPERIENCE h1, #EDUCATION h1, #HW h1{
+    text-align: center;
+    color: #1e1f26;
+    font-weight: bold;
+}
+
+#EXPERIENCE h5, #EXPERIENCE h4{
+    text-align: center;
+    padding-top: 30%;
+    padding-bottom: 2%;
+}
+
+#EDUCATION h5, #EDUCATION h4{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#EXPERIENCE p, #EDUCATION p{
+    padding-top: 3%;
+    text-align: center;
+}
+
+/* Styling for the GUI html page where I list all the HW assignments. */
+
+#HW{
+    text-align: center;
+    min-height: 950px;
+}
+
+/* Footer */
+footer{
+    background-color: #283655;
+    min-height: 250px;
+    text-align: center;
+    color:white;
+}
+
+footer h4{
+    padding-top: 2%;
+}

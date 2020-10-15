@@ -1,0 +1,107 @@
+/*
+Taren Chen
+HOMEWORK 3
+Taren_Chen@student.uml.edu
+This is HW3 for GUI 1 Course at UMass Lowell
+Passed CSS validator
+and the link to access it is http://cs.uml.edu/~tchen1/hw3/index.html
+or you can find it from http://cs.uml.edu/~tchen1/gui.html by clicking homework 3
+*/
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+body {
+	background-color: #00569f;
+	background-image:linear-gradient(white, #00569f);
+	background-repeat: no-repeat;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper{
+	width: 80%;
+	margin: auto;
+	min-width: 600px;
+	background-color: rgb(148, 215, 238);
+}
+
+#wrapper header{
+	background-image: url("./sunset.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: rgb(5, 5, 51);
+	padding: 1px;
+}
+
+#content li {
+	list-style: inside url("marker.gif");
+}
+
+#content{
+	margin-left: 225px;
+	background-color: white;
+	padding: 3%; 	
+
+}
+nav{
+	float: left;	
+	width: 200px;
+	background-color: rgb(148, 215, 238);
+}
+
+nav a{
+	color: #000033;
+	text-decoration: none;
+	text-align: left;
+}
+
+nav ul {
+	list-style-type: none;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+img{
+	float: left;
+	margin-right: 2%;
+}
+
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+h1 {
+	color: white;
+}
+h2 {
+	color: #3399CC;
+}
+
+span{
+	color: #16558f;
+	font-weight: bold;
+}
+
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#contact {
+	font-size: 90%;
+}
+dt {
+	color: #000033;
+}
+footer {
+	background-color: white;
+	padding: 3%;
+	font-family: Georgia, "Times New Roman", serif;
+	margin-left: 225px;
+	font-style: italic;
+	font-size: 12px;
+}
+
