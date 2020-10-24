@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Homework 4</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="table.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <form onsubmit="makeTable()">
+            <div class="form-group">
+              <label>Minimum Rows:</label>
+              <input type="integer" class="form-control" id="minRows">
+            </div>
+            <div class="form-group">
+              <label>Maximum Rows</label>
+              <input type="integer" class="form-control" id="maxRows">
+            </div>
+            <div class="form-group">
+                <label>Minimum Columns</label>
+                <input type="integer" class="form-control" id="minColumns">
+              </div>
+              <div class="form-group">
+                <label>Maximum Columns</label>
+                <input type="integer" class="form-control" id="maxColumns">
+              </div>
+              <input type="submit" value="Submit">
+          </form>
+        </div>
+    </body>
+</html>
