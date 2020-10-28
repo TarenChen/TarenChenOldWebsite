@@ -1,5 +1,6 @@
 .content{
   padding-top: 5%;
+  min-height: 975px;
 }
 
 table{
@@ -14,6 +15,11 @@ table, td {
     border-collapse: collapse;
     text-align: center;
     margin: auto;
+}
+
+.description{
+  color: rgb(219, 182, 113);
+  font-style: italic;
 }
 
 #errors{
