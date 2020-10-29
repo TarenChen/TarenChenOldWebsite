@@ -3,6 +3,8 @@
     HW5 
     CS UserName: tchen1
     This is the javascript file for the multi table
+
+    passed JS Validator
 */
 
 function makeTable() {
