@@ -1,5 +1,11 @@
-function makeTable() {
+/*
+    Taren Chen
+    HW5 
+    CS UserName: tchen1
+    This is the javascript file for the multi table
+*/
 
+function makeTable() {
     //Clears table and errors
     var table = ""
     var errorMsg = ""
@@ -36,12 +42,12 @@ function makeTable() {
         errorMsg += error3;
         errorMsg += "<br>";
     }
-    if (errorMsg != "") {
+    if (errorMsg != "") { //Stop the table from generating if Error is found
         document.getElementById("errors").innerHTML = errorMsg;
         return;
     }
 
-    //Math for the table
+    // Math for the table, simply adding HTML code together with correct values
     for (var row = minX - 1; row <= maxX; row++) {
         table += "<tr>";
         if (row == minX - 1) {
