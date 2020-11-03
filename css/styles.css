@@ -27,28 +27,51 @@ body{
 
 /*Nav Bar*/
 
-.navbar-color{
-    background-color: #283655;
-}
-
-.navbar-nav {
+.navbar-nav{
     float:none;
     margin:0 auto;
     display: block;
     text-align: center;
+    font-weight: bold;
 }
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-left:30px;
+    padding-right:30px;
+}
+
+@media (min-width: 768px) {
+  li {
+    display: inline-block !important;
+  }
+}
+
 
 .navbar .navbar-collapse {
     text-align: center;
 }
 
+.navbar {
+    background-color: transparent;
+}
+.navbar-color{
+    background-color: #3AAFA9!important;
+}
 
 /* FrontPage */
 
 .FrontPage{
     background: url("../pictures/mtlay.JPG");
     background-color: #1e1f26;
-    min-height: 910px;
+    min-height: 950px;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +104,7 @@ img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./
 }
 
 #EXPERIENCE, #EDUCATION, #HW{
-    padding-top: 1%;
+    padding-top: 3rem;
     min-height: 600px;
     padding-bottom: 3%;
     margin: 0 auto;
@@ -111,6 +134,10 @@ img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./
     text-align: center;
 }
 
+.card-header{
+    font-weight: bold!important;
+}
+
 /* Styling for the GUI html page where I list all the HW assignments. */
 
 #HW{
@@ -120,7 +147,7 @@ img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./
 
 /* Footer */
 footer{
-    background-color: #283655;
+    background-color: #3AAFA9!important;
     min-height: 250px;
     text-align: center;
     color:white;
