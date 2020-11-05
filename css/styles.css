@@ -92,7 +92,7 @@ img[src="./pictures/umass.png"]{
     width: 250px;
     height: 300px;
     border-style: solid;
-    border-color: rgb(89, 208, 248);
+    border-color: #3AAFA9;
 }
 img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./pictures/fidelity.jpg"], img[src="./pictures/jp.jpg"]{
     width: 250px;
@@ -100,7 +100,7 @@ img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./
     display: block;
     margin: auto;
     border-style: solid;
-    border-color: rgb(89, 208, 248);
+    border-color: #3AAFA9;
 }
 
 #EXPERIENCE, #EDUCATION, #HW{
