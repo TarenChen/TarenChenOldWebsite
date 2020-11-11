@@ -1,7 +1,7 @@
 <!--
     Taren Chen
     CS UserName: tchen1
-    https://tarenchen.github.io/hw5/table.html
+    https://tarenchen.github.io/hw6/table.html
     This is the HTML file for HW5. The multi table.
 
     Passed HTML Validator
@@ -53,11 +53,11 @@
             <label>Maximum Columns</label>
             <input type="number" class="form-control" id="maxColumns" name="maxColumns">
           </div>
-          <button type="button" class="btn btn-secondary" onclick="return makeTable();">Submit</button>
+          <button type="submit" class="btn btn-success">Submit</button>
         </form>
         <br>
-        <!-- Div for errors to display from JS function -->
-        <div id="errors"></div>
+        <!-- In case I want to swap instead of validating when min > max -->
+        <div id="swapXY"></div>
       </div>
     </div>
     <!-- The JS will generate the table here! -->
@@ -73,6 +73,7 @@
       <p> Copyright &copy; 2020 </p>
     </div>
   </footer>
+  <!--jQuery CDNs-->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
