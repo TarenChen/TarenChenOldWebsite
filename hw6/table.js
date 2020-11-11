@@ -121,10 +121,10 @@ $(document).ready(function () {
         //What to display as error messages. Using built in msgs for other rules.
         messages: {
             maxRows: {
-                rowMaxValid: "Max Row can not be less than Max Row"
+                rowMaxValid: "Max Row can not be less than Min Row"
             },
             maxColumns: {
-                colMaxValid: "Max Col can not be less than Max Col"
+                colMaxValid: "Max Col can not be less than Min Col"
             }
         },
         // changing the styling for inputs that don't pass validation
