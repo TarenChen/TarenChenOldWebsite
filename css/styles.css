@@ -100,32 +100,36 @@ img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./
     margin: auto;
     border-style: solid;
 }
-
 #EXPERIENCE, #EDUCATION, #HW{
-    padding-top: 3rem;
+    padding-top: 2rem;
     min-height: 600px;
     padding-bottom: 3%;
     margin: 0 auto;
 
 }
-
-#EXPERIENCE h1, #EDUCATION h1, #HW h1{
+h1{
     text-align: center;
     color: #1e1f26;
     font-weight: bold;
 }
 
-#EXPERIENCE h5, #EXPERIENCE h4{
+h5{
     text-align: center;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-bottom: 2%;
 }
-
-#EXPERIENCE p, #EDUCATION p{
-    padding-top: 3%;
+h4{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+p{
+    padding-top: 2%;
     text-align: center;
 }
-
+.card{
+    max-width: 30rem;
+}
 .card-header{
     font-weight: bold!important;
 }
@@ -140,11 +144,10 @@ img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./
 /* Footer */
 footer{
     background-color: #3AAFA9!important;
-    min-height: 250px;
+    min-height: 200px;
     text-align: center;
     color:white;
-}
-
-footer h4{
-    padding-top: 2%;
+    border-top-color: black!important;
+    border-color: #3AAFA9;
+    border-style: solid;
 }
