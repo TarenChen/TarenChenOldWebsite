@@ -35,7 +35,7 @@ function makeTable() {
     // }
     createTable(minX, maxX, minY, maxY);
 }
-function createTable(minX, maxX, minY, maxY){
+function createTable(minX, maxX, minY, maxY) {
     var table = ""
     document.getElementById("generateTable").innerHTML = table;
 
@@ -64,23 +64,28 @@ function createTable(minX, maxX, minY, maxY){
 //jQuery Validation
 $(document).ready(function () {
     //Make sure the min < max for rows
-    $.validator.addMethod("rowMaxValid", function(value, param) {
-        if (parseInt($("#maxRows").val()) < parseInt($("#minRows").val())){
-          return false;
+    $.validator.addMethod("rowMaxValid", function (value, param) {
+        if (parseInt($("#maxRows").val()) < parseInt($("#minRows").val())) {
+            return false;
         }
-        else{
-          return true;
+        else {
+            return true;
         }
     });
     //Make sure the min < max for columns
-    $.validator.addMethod("colMaxValid", function(value, param) {
-        if (parseInt($("#maxColumns").val()) < parseInt($("#minColumns").val())){
-          return false;
+    $.validator.addMethod("colMaxValid", function (value, param) {
+        if (parseInt($("#maxColumns").val()) < parseInt($("#minColumns").val())) {
+            return false;
         }
-        else{
-          return true;
+        else {
+            return true;
         }
     });
+    //No decimals
+    $.validator.addMethod("noDecimal", function (value, element) {
+        return !(value % 1);
+    }, "No decimal numbers");
+
     $("#multiForm").validate({
         //Rules for the validations
         /*
@@ -94,12 +99,14 @@ $(document).ready(function () {
             minRows: {
                 required: true,
                 number: true,
+                noDecimal: true,
                 min: -50,
                 max: 50
             },
             maxRows: {
                 required: true,
                 number: true,
+                noDecimal: true,
                 min: -50,
                 max: 50,
                 rowMaxValid: "#minRows"
@@ -107,12 +114,14 @@ $(document).ready(function () {
             minColumns: {
                 required: true,
                 number: true,
+                noDecimal: true,
                 min: -50,
                 max: 50
             },
             maxColumns: {
                 required: true,
                 number: true,
+                noDecimal: true,
                 min: -50,
                 max: 50,
                 colMaxValid: "#minColumns"
@@ -130,12 +139,12 @@ $(document).ready(function () {
         // changing the styling for inputs that don't pass validation
         highlight: function (element) {
             $(element).addClass('error');
-        }, 
+        },
         unhighlight: function (element) {
             $(element).removeClass('error');
         },
         //submit calls the makeTable function
-        submitHandler: function(form, e){
+        submitHandler: function (form, e) {
             e.preventDefault();
             makeTable();
         }
