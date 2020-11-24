@@ -140,6 +140,13 @@ p{
     min-height: 950px;
 }
 
+/* Logo */
+img[src="./logo/cyanback.jpg"]{
+    width: 25%;
+    height: 25%;
+    padding:none;
+}
+
 /* Footer */
 footer{
     background-color: #3AAFA9!important;
@@ -150,3 +157,4 @@ footer{
     border-color: #3AAFA9;
     border-style: solid;
 }
+
