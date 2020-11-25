@@ -241,7 +241,7 @@ function addTab() {
         var maxY = parseInt(document.getElementById("maxColumns").value);
         var count = $("#tabs li").length + 1;
         /* got span class from jQuery tabs documentation */
-        var list = `<li><input type="checkbox"><a href='#tab${count}'</a>Rows: ${minX}-${maxX} <br> Columns: ${minY}-${maxY}<br><br><span class='ui-icon ui-icon-close'role='presentation'>Remove Tab</span></li>`;
+        var list = `<li><input type="checkbox"><a href='#tab${count}'</a>Rows: ${minX} to ${maxX} <br> Columns: ${minY} to ${maxY}<br><br><span class='ui-icon ui-icon-close'role='presentation'>Remove Tab</span></li>`;
         $("div#tabs ul").append(list);
         console.log(makeTable());
         $("div#tabs").append('<div id="tab' + count + '">' + "<table>" + makeTable() + "</table" + '</div>');
