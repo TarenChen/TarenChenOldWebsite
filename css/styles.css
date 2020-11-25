@@ -93,8 +93,8 @@ img[src="./pictures/umass.png"]{
     border-style: solid;
 }
 img[src="./pictures/redhat.jpg"], img[src="./pictures/philips.png"], img[src="./pictures/fidelity.jpg"], img[src="./pictures/jp.jpg"]{
-    width: 275px;
-    height: 250px;
+    width: 250px;
+    height: 225px;
     display: block;
     margin: auto;
     border-style: solid;

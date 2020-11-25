@@ -1,0 +1,102 @@
+<!--
+    Taren Chen
+    CS UserName: tchen1
+    https://tarenchen.github.io/hw7/table.html
+    This is the HTML file for HW7. The multi table with sliders and tabs
+
+    Passed HTML Validator
+    CSS also passed the validator
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Homework 7</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-color">
+    <!-- got from bootstrap documentation -->
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Taren Chen</a>
+    </div>
+  </nav>
+  <div class="content">
+    <div class="container">
+      <!-- Gives a nice styled background -->
+      <div class="jumbotron">
+        <h1 class="display-5">Dynamic Multiplication Table</h1>
+        <br>
+        <p class="description">Used jQuery UI to add sliders and tabs.</p>
+        <br>
+        <!--Form starts here -->
+        <form id="multiForm">
+          <div class="form-group">
+            <label for="minRows">Minimum Rows:</label>
+            <input type="number" class="form-control" id="minRows" name="minRows">
+            <div class="slider" id="sliderMinRows"></div>
+          </div>
+          <div class="form-group">
+            <label for="maxRows">Maximum Rows</label>
+            <input type="number" class="form-control" id="maxRows" name="maxRows">
+            <div class="slider" id="sliderMaxRows"></div>
+          </div>
+          <div class="form-group">
+            <label for="minColumns">Minimum Columns</label>
+            <input type="number" class="form-control" id="minColumns" name="minColumns">
+            <div class="slider" id="sliderMinColumns"></div>
+          </div>
+          <div class="form-group">
+            <label for="maxColumns">Maximum Columns</label>
+            <input type="number" class="form-control" id="maxColumns" name="maxColumns">
+            <div class="slider" id="sliderMaxColumns"></div>
+          </div>
+          <!-- buttons that call JS functions -->
+          <button type="button" class="btn btn-success" onclick="addTab()">Add Tab</button>
+          <button type="button" class="btn btn-success" onclick="removeSelectedTabs()">Remove Selected</button>
+          <button type="button" class="btn btn-success" onclick="removeAllTabs()">Remove All</button>
+
+        </form>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="myContain">
+        <!-- The JS will generate the table here! -->
+        <table id="generateTable"></table>
+      </div>
+    </div>
+    <!-- Where the tabs will be when saved -->
+    <hr>
+    <h4>Tabs</h4>
+    <div id="tabs">
+      <ul></ul>
+    </div>
+  </div>
+  <!-- My template footer -->
+  <footer>
+    <div class="container">
+      <h4>CONTACT</h4>
+      <hr>
+      <p> <b>Taren Chen</b> <br> taren_chen@student.uml.edu <br>
+        <a href="https://www.linkedin.com/in/tarenchen/" target="_blank" class="fa fa-linkedin"></a> </p> <br>
+      <p> <em>Copyright &copy; 2020</em> </p>
+    </div>
+  </footer>
+  <!--jQuery CDNs-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="table.js"></script>
+</body>
+
+</html>
