@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>scrabble</title>
+
+    <link rel="stylesheet" href="scrabble.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div id="board">
+                <h1>Scrabble</h1> <br>
+                <p>Begin by dragging a letter to the first tile.</p>
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li id='drop0' class="emptyBoard"></li>
+                            <li id='drop1' class="doubleLetter"></li>
+                            <li id='drop2' class="emptyBoard"></li>
+                            <li id='drop3' class="emptyBoard"></li>
+                            <li id='drop4' class="doubleLetter"></li>
+                            <li id='drop5' class="emptyBoard"></li>
+                            <li id='drop6' class="emptyBoard"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" id="score"></div>
+                    <div class="col-4" id="word"></div>
+                    <div class="col-4" id="remainingTiles"></div>
+                </div> <br>
+                <button onclick="submitWord()">Submit Word</button>
+                <button onclick="restartGame()">Restart Game</button>
+                <div class="col-12" id="rack">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--jQuery CDNs-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="scrabble.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+#board{
+    margin: auto;
+    text-align: center;
+}
+
+
+#board li{
+    list-style: none;
+    display: inline-block;
+}
+
+#rack{
+    background-image:url("./pictures/woodbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 700px;
+    min-height: 100px;
+    margin: auto;
+    text-align: center;
+    border: solid;
+    padding-top: 1%;
+    margin-top: 5%;
+
+}
+
+#rack img{
+    width: 60px;
+    height: 60px;
+    padding: 5%;
+}
+
+
+.emptyBoard{
+    content:url("./pictures/blank_board.PNG");
+}
+.doubleLetter{
+    content:url("./pictures/double_letterboard.PNG");
+}
