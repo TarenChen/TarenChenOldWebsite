@@ -1,11 +1,18 @@
+<!--
+HW8:
+This is HW8 for GUI 1 Course at UMass Lowell
+Passed HTML validator
+and the link to access it is https://tarenchen.github.io/hw8/scrabble.html
+-->
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>scrabble</title>
-
+    
+    <meta charset="UTF-8">
+    <!-- Link the scrabble css to this HTML -->
     <link rel="stylesheet" href="scrabble.css">
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -18,13 +25,17 @@
 </head>
 
 <body>
+    <!-- container and jumbotron for easy styling -->
     <div class="container">
         <div class="jumbotron">
+            <!-- this div will hold the css for the "board" -->
             <div id="board">
                 <h1>Scrabble</h1> <br>
                 <p>Begin by dragging a letter to the first tile.</p>
+                <!-- bootstrap row / col for a flex box placement -->
                 <div class="row">
                     <div class="col-12">
+                        <!-- each one of the board blocks, the div's background is a picture of the blocks -->
                         <ul>
                             <li id='drop0' class="emptyBoard"></li>
                             <li id='drop1' class="doubleLetter"></li>
@@ -37,15 +48,20 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Hold all the data we generate from the JS -->
                     <div class="col-4" id="score"></div>
                     <div class="col-4" id="word"></div>
                     <div class="col-4" id="remainingTiles"></div>
                 </div> <br>
+                <!-- buttons to submit word and restart game-->
                 <button onclick="submitWord()">Submit Word</button>
                 <button onclick="restartGame()">Restart Game</button>
+                <!-- the tiles will be generated here -->
                 <div class="col-12" id="rack">
                     <ul></ul>
                 </div>
+                <!-- if we run out of tiles, a message will be generated here -->
+                <div class="col-12" id="outOfTiles"></div>
             </div>
         </div>
     </div>

@@ -1,3 +1,4 @@
+/* I took the data structure and modified it by adding "letter" and "img" for me to use later. */
 var data = []
 data["A"] = { "letter": "A", "value": 1, "amount": 9, "img": "<img src='./pictures/Scrabble_Tiles/Scrabble_Tile_A.jpg'>" }
 data["B"] = { "letter": "B", "value": 3, "amount": 2, "img": "<img src='./pictures/Scrabble_Tiles/Scrabble_Tile_B.jpg'>" }
@@ -28,14 +29,20 @@ data["Z"] = { "letter": "Z", "value": 10, "amount": 1, "img": "<img src='./pictu
 data["_"] = { "letter": "_", "value": 0, "amount": 1, "img": "<img src='./pictures/Scrabble_Tiles/Scrabble_Tile_Blank.jpg'>" }
 
 
-/* Make a copy so it doesn't change regular data when we need to see the values */
+/* Make a copy so it doesn't change the default data when we need to see the values */
 var tiles = Object.assign({}, data)
 
+/* declared global variables, these are the ones we use to display our values in the website */
 var totalTiles = 100;
 var index = 0;
 var score = 0;
 var word = "";
 
+/* 
+This function generates the tiles randomly, and subtracts from our total as well as copy of the data structure. 
+When we use all the copies of a certain letter it will remove it from our temp data structure.
+When we run out of tiles, it will notify the user to finish using the tiles left and then restart the game.
+*/
 function generateTiles(numTiles) {
     for (var i = 0; i < numTiles; i++) {
         randomLetter = randomProperty(tiles)["letter"]
@@ -45,6 +52,10 @@ function generateTiles(numTiles) {
         if (tiles[randomLetter]['amount'] == 0) {
             delete tiles[randomLetter];
         }
+        if (totalTiles == 0) {
+            $("#outOfTiles").html("You may use the rest of the tiles left, then must restart the game to continue playing!");
+            return;
+        }
         $("#rack ul").append("<li id='" + randomLetter + "'>" + randomTile + "</li > ");
         totalTiles = totalTiles - 1;
     }
@@ -53,6 +64,8 @@ function generateTiles(numTiles) {
 https://jqueryui.com/droppable/#revert
 https://stackoverflow.com/questions/5735270/revert-a-jquery-draggable-object-back-to-its-original-container-on-out-event-of/5848800#5848800
 https://stackoverflow.com/questions/26746823/jquery-ui-drag-and-drop-snap-to-center/26764579#26764579
+
+This function makes the first block droppable until something is dropped on it then it will make the next one droppable. 
 */
 function setUp() {
     remainingTiles();
@@ -62,6 +75,7 @@ function setUp() {
         $("#drop" + i).droppable('disable')
     }
     $('#rack li').droppable('disable');
+    /* bounce back to rack if placed somewhere it's not suppose to be */
     $("#rack li").draggable({
         revert: function (event, ui) {
             $(this).data("uiDraggable").originalPosition = {
@@ -72,6 +86,7 @@ function setUp() {
         }
     });
 }
+/* lets the tiles in the rack all be draggable */
 $(function () {
     $("#rack li").draggable({
         revert: function (event, ui) {
@@ -82,6 +97,7 @@ $(function () {
             return !event;
         }
     });
+    /* this handles the drop event, when a tile is dropped it will add the correct points as well as make it no longer draggable */
     $("#board li").droppable({
         drop: function (event, ui) {
             $("#drop" + index).droppable('disable');
@@ -109,6 +125,7 @@ $(function () {
     });
 });
 
+/* update the current score when called */
 function updateScore(points) {
     if (index == 2 || index == 5) {
         points = points * 2;
@@ -117,15 +134,18 @@ function updateScore(points) {
     $("#score").html("Score: " + score);
 }
 
+/* update the current word when called */
 function displayWord(letter) {
     word = word + letter;
     $("#word").html("Word: " + word);
 }
 
+/* update the remaining tiles count when called */
 function remainingTiles() {
     $("#remainingTiles").html("Remaining Tiles: " + totalTiles);
 }
 
+/* refresh the board by deleting the classes that had draggable disabled, then setup for the next round. */
 function submitWord() {
     index = 0;
     /*https://stackoverflow.com/questions/10842471/how-to-remove-all-elements-of-a-certain-class-from-the-dom*/
@@ -136,11 +156,8 @@ function submitWord() {
     $("#word").html("Word: " + word);
 }
 
+/* restart the game by reloading the page refreshing all the data */
 function restartGame() {
-    // tiles = Object.assign({}, data)
-    // score = 0;
-    // generateTiles(7);
-    // setUp();
     window.location.reload();
 }
 
@@ -152,6 +169,9 @@ var randomProperty = function (obj) {
     var keys = Object.keys(obj);
     return obj[keys[keys.length * Math.random() << 0]];
 };
+
+
+/* main function / starting the game */
 
 generateTiles(7);
 setUp();

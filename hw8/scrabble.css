@@ -1,14 +1,21 @@
+/*
+HW8:
+This is HW8 for GUI 1 Course at UMass Lowell
+Passed CSS validator
+and the link to access it is https://tarenchen.github.io/hw8/scrabble.html
+*/
+
+/* center the board */
 #board{
     margin: auto;
     text-align: center;
 }
-
-
+/* remove default styling from list items and make them inline */
 #board li{
     list-style: none;
     display: inline-block;
 }
-
+/* give a nice background pic of wood */
 #rack{
     background-image:url("./pictures/woodbg.jpg");
     background-size: cover;
@@ -22,14 +29,14 @@
     margin-top: 5%;
 
 }
-
+/* size of the blocks */
 #rack img{
     width: 60px;
     height: 60px;
     padding: 5%;
 }
 
-
+/* get the pictures of the board*/
 .emptyBoard{
     content:url("./pictures/blank_board.PNG");
 }
